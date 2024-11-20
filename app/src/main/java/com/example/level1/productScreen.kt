@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,12 +25,26 @@ import androidx.compose.ui.unit.dp
 @Preview
 
 fun productScren() {
+    val productShoesList = listOf(
+        productShoesObject.sepatusuper1,
+        productShoesObject.sepatusuper2,
+        productShoesObject.sepatusuper3,
+        productShoesObject.sepatusuper4,
+        productShoesObject.sepatusuper5,
+        productShoesObject.sepatusuper6,
+        productShoesObject.sepatusuper7,
+        productShoesObject.sepatusuper8,
+        productShoesObject.sepatusuper9,
+        productShoesObject.sepatusuper10,
+        )
+
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         modifier = Modifier.fillMaxSize()
-            .background(Color.White)
+            .background(Color.White).padding(16.dp)
     ) {
-    items(4){
+    items(productShoesList){
+        WidgetProduct -> Widget(ProductShoesEntity = productShoesObject.sepatusuper)
     }
     }
 }

@@ -29,7 +29,10 @@ import coil.compose.AsyncImage
 @Composable
 @Preview
 
-fun Widget(){
+fun Widget(
+    ProductShoesEntity: productShoesEntity = productShoesObject.sepatusuper,
+
+){
     Row(
         modifier = Modifier
             .width(162.dp)
@@ -38,24 +41,21 @@ fun Widget(){
             .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
     ){
-        Box(
-            modifier = Modifier
-                .padding()
-        )
+
         Card(modifier = Modifier
-            .width(162.dp)
-            .height(188.dp))
+            .width(138.dp)
+            .height(166.dp))
         {
             Card(modifier = Modifier
                 .height(90.dp)
-                .width(130.dp),
+                .width(150.dp),
                 colors = CardDefaults.cardColors(Color.Red)
             ) { }
             Column(
                 modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text("Nama Product", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                Text(ProductShoesEntity.name, fontSize = 10.sp, fontWeight = FontWeight.Bold)
                 Spacer(modifier = Modifier.height(2.dp))
                 Card (
                     modifier = Modifier
@@ -65,7 +65,7 @@ fun Widget(){
                 ){  Box (modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 )
-                {Text("Rating", fontSize = 8.sp, fontWeight = FontWeight.Normal)  } }
+                {Text(ProductShoesEntity.rating.toString() + " Rating", fontSize = 8.sp, fontWeight = FontWeight.Normal)  } }
             }
 
 
