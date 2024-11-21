@@ -31,7 +31,12 @@ class MainActivity : ComponentActivity() {
                     startDestination = "menu_screen"
                 ){
                     composable("menu_screen"){
+
                         HomeScreen(navController)
+                    }
+
+                    composable("product_screen"){
+                        productScren()
                     }
                 }
             }

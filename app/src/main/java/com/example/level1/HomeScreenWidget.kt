@@ -47,7 +47,7 @@ fun HomeScreenWidget(
     ){
         //membuat card untuk gambar dan deskripsi produk
         Card (modifier = Modifier
-
+            
             .width(100.dp)
             .height(100.dp)){
             AsyncImage(
