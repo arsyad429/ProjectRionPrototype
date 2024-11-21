@@ -16,9 +16,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-//membuat fungsi untuk menampilkan layar homescreen
+@Preview
 fun HomeScreen(
     navController: NavController = rememberNavController()
 ) {

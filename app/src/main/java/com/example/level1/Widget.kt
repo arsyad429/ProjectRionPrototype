@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -17,6 +18,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.HorizontalAlignmentLine
@@ -35,22 +38,34 @@ fun Widget(
 ){
     Row(
         modifier = Modifier
-            .width(162.dp)
-            .height(188.dp)
+            .width(172.dp)
+            .height(198.dp)
             .background(Color.White)
             .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
     ){
 
         Card(modifier = Modifier
-            .width(138.dp)
-            .height(166.dp))
+            .width(148.dp)
+            .height(176.dp)
+            .shadow(
+                elevation = 5.dp,
+                ambientColor = Color.Black,
+                spotColor = Color.Black,
+                shape = RoundedCornerShape(10.dp)
+            ),
+            colors = CardDefaults.cardColors(Color.White))
         {
             Card(modifier = Modifier
                 .height(90.dp)
                 .width(150.dp),
                 colors = CardDefaults.cardColors(Color.Red)
-            ) { }
+            ) { AsyncImage(
+                model = ProductShoesEntity.imageURL,
+                contentDescription = ProductShoesEntity.name,
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            ) }
             Column(
                 modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -61,11 +76,11 @@ fun Widget(
                     modifier = Modifier
                         .width(40.dp)
                         .height(13.dp),
-                    colors = CardDefaults.cardColors(Color.Blue)
+                    colors = CardDefaults.cardColors(Color.White)
                 ){  Box (modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 )
-                {Text(ProductShoesEntity.rating.toString() + " Rating", fontSize = 8.sp, fontWeight = FontWeight.Normal)  } }
+                {Text(ProductShoesEntity.rating.toString() + " ⭐", fontSize = 8.sp, fontWeight = FontWeight.Normal)  } }
             }
 
 

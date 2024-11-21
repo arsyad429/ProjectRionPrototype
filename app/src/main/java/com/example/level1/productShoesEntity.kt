@@ -19,7 +19,7 @@ object productShoesObject {
         imageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWvmkhxgLyd9EumCKvdDylQEH3GtnP69kVxQ&s"
     )
     val sepatusuper2 = productShoesEntity(
-        name = "Nike Air Force 1 Shadow Women",
+        name = "Nike Air Force 1 \nShadow Women",
         rating = 4.5,
         imageURL = "https://jdsports.id/_next/image?url=https%3A%2F%2Fimages.jdsports.id%2Fi%2Fjpl%2Fjd_DZ1847-106_a%3Fw%3D700%26resmode%3Dsharp%26qlt%3D70%26fmt%3Dwebp&w=1920&q=75"
     )
@@ -29,17 +29,17 @@ object productShoesObject {
         imageURL = "https://jdsports.id/_next/image?url=https%3A%2F%2Fimages.jdsports.id%2Fi%2Fjpl%2Fjd_HM0621-001_a%3Fw%3D700%26resmode%3Dsharp%26qlt%3D70%26fmt%3Dwebp&w=1920&q=75"
     )
     val sepatusuper4 = productShoesEntity(
-        name = "Air Jordan 1 Hight OG Black and Gold",
+        name = "Air Jordan 1 Hight OG\n     Black and Gold ",
         rating = 4.8,
         imageURL = "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9904a515-9702-4924-9f7f-7aa7377323bd/AIR+JORDAN+1+RETRO+HIGH+OG+GS.png"
     )
     val sepatusuper5 = productShoesEntity(
-        name = "Air Jordan 4 Retro Pine Green SB",
+        name = "      Air Jordan 4 \nRetro Pine Green SB",
         rating = 4.6,
         imageURL = "https://kolabstore.com/cdn/shop/products/1_70.png?v=1679676111&width=600"
     )
     val sepatusuper6 = productShoesEntity(
-        name = "Adidas Samba OG White",
+        name = "Adidas Samba OG White ",
         rating = 4.9,
         imageURL = "data:image/jpeg;base64,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"
     )
