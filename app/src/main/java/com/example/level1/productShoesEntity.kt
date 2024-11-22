@@ -8,6 +8,12 @@ data class productShoesEntity(
 )
 
 object productShoesObject {
+    fun getProductByName(name: String?): productShoesEntity? {
+        return listOf(
+            sepatusuper, sepatusuper1, sepatusuper2, sepatusuper3, sepatusuper4,
+            sepatusuper5, sepatusuper6, sepatusuper7, sepatusuper8, sepatusuper9, sepatusuper10
+        ).find { it.name == name }
+    }
     val sepatusuper = productShoesEntity(
         name = "Nike Air Max 90",
         rating = 4.8,

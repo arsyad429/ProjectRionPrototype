@@ -31,19 +31,18 @@ class MainActivity : ComponentActivity() {
                     startDestination = "menu_screen"
                 ){
                     composable("menu_screen"){
-
                         HomeScreen(navController)
                     }
 
                     composable("product_screen"){
                         productScren(navController)
                     }
-                    composable("detail_product_screen/{name}"){
-                        val name = it.arguments?.getString("name")
-                        DetailProductScreen(
-                            name = name.toString()
-                        )
-                    }
+//                    composable("detail_product_screen/{name}"){
+//                        val name = it.arguments?.getString("name")
+//                        DetailProductScreen(
+//                            name = name.toString()
+//                        )
+//                    }
                 }
             }
         }

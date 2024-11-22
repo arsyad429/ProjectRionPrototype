@@ -54,7 +54,7 @@ fun HomeScreen(
         ){
 
             items(menulist){homeScreenEntity ->
-                HomeScreenWidget(homeScreenEntity = homeScreenEntity){
+                HomeScreenWidget(homeScreenEntity){
                     navController.navigate("product_screen")
 
                 }

@@ -1,5 +1,6 @@
 package com.example.level1
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -43,6 +44,7 @@ fun HomeScreenWidget(
         .background(Color.White)
         .padding(8.dp)
         .clickable{
+            Log.d("Navigation", "Navigating to product_screen")
             onClick(homeScreenEntity)
         },
         horizontalAlignment = Alignment.CenterHorizontally
