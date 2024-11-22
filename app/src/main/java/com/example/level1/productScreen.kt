@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -21,11 +22,14 @@ import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 
 @Composable
 @Preview
@@ -49,7 +53,7 @@ fun productScren() {
        Box (modifier = Modifier.fillMaxWidth().height(70.dp)){
            Card (modifier = Modifier
                .fillMaxWidth()
-               .height(50.dp)
+               .height(60.dp)
                .shadow(
                    elevation = 8.dp,
                    ambientColor = Color.Black,
@@ -65,7 +69,30 @@ fun productScren() {
                    topEnd = 0.dp,
                    bottomStart = 15.dp,
                    bottomEnd = 15.dp),
-               colors = CardDefaults.cardColors(Color.Gray)){  }
+               colors = CardDefaults.cardColors(Color.White)){
+               Row  (modifier = Modifier.fillMaxSize()) {
+                Box(modifier = Modifier
+                    .fillMaxHeight()
+                    .width(150.dp)
+                    .padding(start = 50.dp, end = 0.dp, top = 0.dp, bottom = 0.dp),
+                    contentAlignment = Alignment.Center){
+                    Text("Shoes", modifier = Modifier
+                        .padding(top = 25.dp, bottom = 5.dp, start = 0.dp))
+                }
+                   Card (modifier = Modifier
+                       .fillMaxHeight()
+                       .fillMaxWidth()
+                       .padding(start = 30.dp, top = 25.dp, end = 7.dp, bottom = 5.dp)){
+                       AsyncImage(
+                           model = "https://png.pngtree.com/png-vector/20231230/ourmid/pngtree-dropshipping-men-hole-sole-jogging-shoes-png-image_11389148.png",
+                           contentDescription = "sepatu",
+                           modifier = Modifier.width(250.dp),
+                           contentScale = ContentScale.Crop
+                       )
+                   }
+               }
+
+           }
        }
 
        LazyVerticalGrid(

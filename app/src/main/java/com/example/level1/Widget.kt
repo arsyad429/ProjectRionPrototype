@@ -42,6 +42,7 @@ fun Widget(
             .height(198.dp)
             .background(Color.White)
             .padding(16.dp),
+
             verticalAlignment = Alignment.CenterVertically
     ){
 
@@ -59,7 +60,7 @@ fun Widget(
             Card(modifier = Modifier
                 .height(90.dp)
                 .width(150.dp),
-                colors = CardDefaults.cardColors(Color.Red)
+                colors = CardDefaults.cardColors(Color.Transparent)
             ) { AsyncImage(
                 model = ProductShoesEntity.imageURL,
                 contentDescription = ProductShoesEntity.name,
@@ -75,10 +76,10 @@ fun Widget(
                 Card (
                     modifier = Modifier
                         .width(40.dp)
-                        .height(13.dp),
+                        .height(25.dp),
                     colors = CardDefaults.cardColors(Color.White)
                 ){  Box (modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
+                    contentAlignment = Alignment.TopCenter
                 )
                 {Text(ProductShoesEntity.rating.toString() + " ⭐", fontSize = 8.sp, fontWeight = FontWeight.Normal)  } }
             }

@@ -12,13 +12,13 @@ object menuObject{
     val shoes = HomeScreenEntity(
         id = "1",
         name = "Shoes",
-        category = "Fasion",
+        category = "Fashion",
         imageURL = "https://png.pngtree.com/png-vector/20231230/ourmid/pngtree-dropshipping-men-hole-sole-jogging-shoes-png-image_11389148.png"
     )
     val clothes = HomeScreenEntity(
         id = "2",
         name = "Clothes",
-        category = "Fasion",
+        category = "Fashion",
         imageURL = "https://freepngimg.com/thumb/categories/1508.png"
     )
     val gadget = HomeScreenEntity(
@@ -36,7 +36,7 @@ object menuObject{
     val bag = HomeScreenEntity(
         id = "5",
         name = "Bag",
-        category = "Fasion",
+        category = "Fashion",
         imageURL = "https://static.vecteezy.com/system/resources/previews/023/522/781/non_2x/school-backpack-cutout-png.png"
     )
     val books = HomeScreenEntity(
