@@ -122,7 +122,7 @@ fun productScren(
 
                 items(productShoesList){ ProductShoesEntity ->
                     Widget(ProductShoesEntity = ProductShoesEntity){
-                       state++
+                       navController.navigate("detail_product_screen/${ProductShoesEntity.name}")
                     }
 
                 }

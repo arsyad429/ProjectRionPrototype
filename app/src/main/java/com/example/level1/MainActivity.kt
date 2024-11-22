@@ -37,12 +37,19 @@ class MainActivity : ComponentActivity() {
                     composable("product_screen"){
                         productScren(navController)
                     }
-//                    composable("detail_product_screen/{name}"){
-//                        val name = it.arguments?.getString("name")
-//                        DetailProductScreen(
-//                            name = name.toString()
-//                        )
-//                    }
+                    composable("detail_product_screen/{name}"){backStackEntry->
+                        val name = backStackEntry.arguments?.getString("name") ?: ""
+                        val product = productShoesObject.getProductByName(name)
+
+                        if (product != null) {
+                            DetailProductScreen(product = product)
+                        } else {
+                            Text(
+                                text = "Product not found",
+                                modifier = Modifier.fillMaxSize()
+                            )
+                        }
+                    }
                 }
             }
         }

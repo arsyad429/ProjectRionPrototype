@@ -8,6 +8,25 @@ data class productShoesEntity(
 )
 
 object productShoesObject {
+    fun filterProducts(name: String? = null, minRating: Double? = null): List<productShoesEntity> {
+        val result = mutableListOf<productShoesEntity>()
+        val allProducts = listOf(
+            sepatusuper, sepatusuper1, sepatusuper2, sepatusuper3, sepatusuper4,
+            sepatusuper5, sepatusuper6, sepatusuper7, sepatusuper8, sepatusuper9, sepatusuper10
+        )
+
+        for (product in allProducts) {
+            if (name != null && !product.name.contains(name, ignoreCase = true)) {
+                continue
+            }
+            if (minRating != null && product.rating < minRating) {
+                continue
+            }
+            result.add(product)
+        }
+        return result
+    }
+
     fun getProductByName(name: String?): productShoesEntity? {
         return listOf(
             sepatusuper, sepatusuper1, sepatusuper2, sepatusuper3, sepatusuper4,
