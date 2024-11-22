@@ -38,6 +38,12 @@ class MainActivity : ComponentActivity() {
                     composable("product_screen"){
                         productScren()
                     }
+                    composable("detail_product_screen/{name}"){
+                        val name = it.arguments?.getString("name")
+                        DetailProductScreen(
+                            name = name.toString()
+                        )
+                    }
                 }
             }
         }

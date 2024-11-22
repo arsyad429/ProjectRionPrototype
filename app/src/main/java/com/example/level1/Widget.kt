@@ -34,7 +34,7 @@ import coil.compose.AsyncImage
 
 fun Widget(
     ProductShoesEntity: productShoesEntity = productShoesObject.sepatusuper,
-
+    onClick: (ProductShoesEntity :productShoesEntity ) -> Unit = {}
 ){
     Row(
         modifier = Modifier

@@ -29,12 +29,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 
 @Composable
 @Preview
 
-fun productScren() {
+fun productScren(
+    navController: NavController = rememberNavController()
+) {
     val productShoesList = listOf(
         productShoesObject.sepatusuper1,
         productShoesObject.sepatusuper2,
@@ -102,7 +106,9 @@ fun productScren() {
        ) {
 
            items(productShoesList){
-                   productWidget -> Widget(ProductShoesEntity = productWidget)
+                   ProductShoesEntity -> Widget(ProductShoesEntity)
+                    navController.navigate("detail_product_screen/${ProductShoesEntity.name}")
+
            }
        }
    }
