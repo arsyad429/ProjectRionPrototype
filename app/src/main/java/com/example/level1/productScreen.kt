@@ -106,8 +106,8 @@ fun productScren(
        ) {
 
            items(productShoesList){
-                   ProductShoesEntity -> Widget(ProductShoesEntity)
-                    navController.navigate("detail_product_screen/${ProductShoesEntity.name}")
+                   ProductShoesEntity -> Widget(ProductShoesEntity = ProductShoesEntity)
+               navController.navigate("detail_product_screen/${ProductShoesEntity.name}")
 
            }
        }

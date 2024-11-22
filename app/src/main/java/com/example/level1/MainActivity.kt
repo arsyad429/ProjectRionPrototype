@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     }
 
                     composable("product_screen"){
-                        productScren()
+                        productScren(navController)
                     }
                     composable("detail_product_screen/{name}"){
                         val name = it.arguments?.getString("name")
